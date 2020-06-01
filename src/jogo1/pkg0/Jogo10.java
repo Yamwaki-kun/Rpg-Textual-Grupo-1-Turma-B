@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package jogo1.pkg0;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -13,19 +12,22 @@ import java.util.Scanner;
 
 /**
  *
- * @author Arnaldo
+ * @author Arnaldo,Vitor
  */
 public class Jogo10 {
-
+    
+    public static int nivel = 100;
     public static String nomedousuario;
+
 
     public static void main(String[] args) {
         int iniciarm;
         String msg;
+        String res;
         int vulnerabilidade = 100;
         Scanner sc = new Scanner(System.in);
         int opcao, loop = 0;
-        System.out.println("                                               @  CYBER PUNK 1.0  @                   \n"
+        msg ="                                               @  CYBER PUNK 1.0  @                   \n"
                 + "....................................................         ...........................................................\n"
                 + ".............................................. (A#JC,,*!!¶,,!¶!ë,,.ëëë  ................................................\n"
                 + "..........................................!A–3J!(=!,ëëë\",\"*\"ë*..,..ëë.. . ..............................................\n"
@@ -82,41 +84,110 @@ public class Jogo10 {
                 + "............................................ë@5$3¶,ë.¶¶, .=\"\" \"....,\"\" .¶%3.............................................\n"
                 + "................................................J$7=,*.ë..!,\"..\"*ë...=. ................................................\n"
                 + "...................................................¶J¶CCC7J7CJ7C!(7,....................................................\n"
-                + ".....................................................    ...............................................................");
-
+                + ".....................................................    ...............................................................";
+                TextoLento(msg, 5);
         do {
 
             System.out.print("<1> Jogar \n<2> Instruções \n<3> Créditos \n<4> Sair : ");
-            System.out.println(" \nusuario@khali : ");
+            System.out.println(" \nusuario@kali : ");
             opcao = sc.nextInt();
 
             switch (opcao) {
                 case 1:
                     System.out.print("Por favor digite o seu nome de usuário : ");
 
-                    nomedousuario = (sc.next() + "@khali : ");
+                    nomedousuario = (sc.next() + "@kali : ");
                     System.out.println("******************************************************************************************************************************");
-                    System.out.println(nomedousuario + "VOZINTERIOR@Khali : O computador não é um dos mais modernos, más o intel atom com 1gb de ram da conta :) ");
+                    System.out.println("DAEKNETRECRUTADOR@kali : O computador não é um dos mais modernos, más o intel atom com 1gb de ram da conta :) ");
 
                     System.out.println("*******************************************************************************************************************************");
-                    System.out.println("Vulnerabilidade do sistema : " + vulnerabilidade + "%");
+                    System.out.println("Defesa do sistema : " + vulnerabilidade + "%");
                     System.out.println("********************************************************************************************************************************");
                     System.out.println("Você : hmm vamos lá, acabei de receber uma notificação da darknet, o pessoal quer testar os seus conhecimentos");
                     System.out.println("*********************************************************************************************************************************");
-                    System.out.println("Aceitar missão ? Digite 0 para não ////// E 1 para sim ");
+                    System.out.println("Digite 1 para começar e 0 para sair : ");
                     iniciarm = sc.nextInt();
+                    
+                    
                     if (iniciarm == 1) {
                         vulnerabilidade = vulnerabilidade + Tutorial();
-                        System.out.println("Seu total de vulnerabilidade é: " + vulnerabilidade + "%");
-                        msg = "HMM, Você tá sabido hein !! vamos partir para algo mais hardcore... \nO @NIGHMARE precisa de uma ajuda... \nvá até a conexão pública mais próxima da localização enviada em seu celular, chegando lá busque pelo IP: 177.102.44.83";
+                        System.out.println("** AVAST PREMIUM CRACKEADO 1.0 INSTALADO.  \n Defesa do sistema: " + vulnerabilidade + "%");
+                        msg = "DARKNETRECRUTADOR@kali : HMM, Você tá sabido hein !! \n vamos partir para algo mais hardcore... \nO NIGHTMARE@KALI precisa de uma ajuda... \nvá até a conexão pública mais próxima da localização enviada em seu celular, chegando lá busque pelo IP: 177.102.44.83\n";
                         TextoLento(msg, 30);
-                        msg = "NIGHTMARE@KHALI: Existem 3 servidores online \n Você possui 5 chances para acertar qual é o servidor, errar não é uma opção, BOA SORTE. \n (Digite 1,2 ou três para acertar) ";
+                        msg = "NIGHTMARE@KALI: Existem 3 servidores online\nvocê possui 5 chances para acertar qual é o servidor, errar não é uma opção, BOA SORTE. \n(Digite 1,2 ou 3 para acertar) ";
                         TextoLento(msg, 30);
                         missao1(0);
+                        
+                        System.out.println("\n");
+                        
+                        //missão 2 main
                         vulnerabilidade = vulnerabilidade + missao2();
-                        System.out.println(vulnerabilidade);
-
-                    }
+                        System.out.println("Defesa do sistema : " + vulnerabilidade);
+                        
+                        msg = "NIGHTMARE@KALI : aaahmm.. novato sua missão agora pode ser meio tenebrosa.. \n";
+                        TextoLento(msg,30);
+                        
+                        msg = "NIGHTMARE@KALI : Bom, naquele servidor peguei algumas informações, vamos precisar contatar um assassino \n";
+                        TextoLento(msg,15);
+                        System.out.println(nomedousuario + "Mas porque ????");
+                        
+                        System.out.println("NIGHTMARE@KALI : Eram informações confidênciais, coisa de politico, depois te explico, \n Você vai orientar o sniper através de um semáforo... \n hackeando um semáforo você vai precisar dar um sinal verde para o disparo do tiro..");                        
+                        
+                        System.out.println(nomedousuario + "QQQQQ ????????");
+                        
+                        //missão 3 main
+                        System.out.println("**manual do semáforo online** \n Quando as maiores cargas de energia são iguais a saída do semáforo é verde \n diferente disso é vermelho. ");
+                        System.out.println("Aponte para a saida verde ");
+                        
+                        System.out.println("    A B");
+                        System.out.println("A)  0 0\nB)  0 1\nC)  1 0\nD)  1 1");
+                        System.out.print(nomedousuario);
+                        vulnerabilidade = vulnerabilidade + missao3(sc.next());
+                        System.out.println("Score na darknet : " + nivel);
+                        System.out.println("Defesa do sistema : " + vulnerabilidade);
+                        //missao4 main
+                        msg = "NIGHMARE@KALI : Mano, acho que temos muitas coisas em comum, temos um futuro promissor...";
+                        TextoLento(msg,30);
+                        
+                        System.out.println("NIGHMARE@KALI : Então mano, consiguimos aparecer na tv, a mídia está dando ouvido para a darknet");
+                        
+                        msg = "NIGHMARE@KALI : Então vamos para a proxima ação...";
+                        TextoLento(msg,30);
+                        System.out.print("NIGHMARE@KALI: Cara vou desativar a chave de segurança dos sevidores do governo por uma hora");
+                        System.out.print("\nNIGHMARE@KALI:Só pra dar um recado, o código criptografado é 1 10 100 1000 10000 10000 1000000");
+                        msg = "NIGHMARE@KALI: você sabe quais são esses números em binário ?";
+                        TextoLento(msg,30);
+                        System.out.println("(Digite os números respectivamente com espaço)");
+                        System.out.println(nomedousuario);
+                        sc.reset();
+                        vulnerabilidade = vulnerabilidade + missao4(sc.next());
+                        System.out.println("Score na darknet : " + nivel);
+                        System.out.println("Defesa do sistema : " + vulnerabilidade);
+                        
+                        //Contexto da história.
+                        System.out.println(nomedousuario + " Mano a gente não se conhece muito bem, me conte um pouco sobre você ? ");
+                        msg = "NIGHTMARE@KALI : AHH.. é meio complicada";
+                        TextoLento(msg,40);
+                        System.out.println("NIGHTMARE@KALI :  Quando eu tinha 14 anos minha irmã morreu por conta de sua condição rara...");
+                        System.out.println("NIGHTMARE@KALI : Bom existia um único medicamento que o mantia viva");
+                        msg = "NIGHTMARE@KALI : Ela faleceu por falta da medicação, houve um desvio de verba pública na região que eu moro, \n NIGHTMARE@KALI : várias pessoas ficaram sem medicamentos, mas nós n podiamos pagar pelo remédio, foi isso..";
+                        System.out.println("NIGHTMARE@KALI : Agora eu faço parte dessa organização, contra corruptos na darknet.");
+                        TextoLento(msg,40);
+                        msg = nomedousuario + " Caramba mano, eu lamento vamos fazer isso por ela, e por todas as outras pessoas";
+                        TextoLento(msg,30);
+                        sc.reset();
+                        
+                        msg = "\nNIGHTMARE@KALI : Bem vindo Novato, a missão de hj vamo voltar no tempo\n"
+                                + "NIGHTMARE@KALI : Conseguimos uma senha no mercado negro, de um servidor que está ativo a mais de 40 anos,\n"
+                                + "NIGHTMARE@KALI : e depois do pessoal estudar ele decobrimos que essa senha é em octal, voce vai precisar transformar\n"
+                                + "NIGHTMARE@KALI : a senha de decimal pra octal e digitar no servidor, a senha é: 55731 lembre-se voce precisa digitar esse valor em octal";
+                        TextoLento(msg,40);
+                        res = sc.nextLine();
+                        vulnerabilidade = vulnerabilidade + missao6(res);
+                        
+                        vulnerabilidade = vulnerabilidade + missao5();
+                        
+                        }
 
                     loop = 1;
                     break;
@@ -124,7 +195,8 @@ public class Jogo10 {
                     System.out.println("Jogo em desenvolvimento... é um rpg cuja suas escolhas influênciam na sua progressão.");
                     loop = 1;
                     break;
-                case 3:
+                case 3:;
+
                     System.out.println("Desenvolvedores Vitor, Arnaldo,Renan,Julio. Produção independente para o desenvolvimento academico na instituição SENAC");
                     loop = 1;
                     break;
@@ -139,7 +211,7 @@ public class Jogo10 {
 
     }
 
-    //Função para desacelar o texto, mensagem = texto, tempo é o tempo que aparece na tela
+    //Função para desacelerar o texto, mensagem = texto, tempo é o tempo que aparece na tela.
     public static void TextoLento(String mensagem, long tempo) {
         for (int i = 0; i < mensagem.length(); i++) {
             System.out.print(mensagem.charAt(i));
@@ -151,51 +223,55 @@ public class Jogo10 {
         }
 
     }
-
+     //tutorial.
     static int Tutorial() {
         Scanner sc = new Scanner(System.in);
         int premio = 0;
         int resposta;
-        String mensagem = "****Bem Vindo ao tutorial de vulnerábilidade, \nA vulnerábilidade é praticamente a sua vida, se ela chegar a 0 voce será rastreado e preso.\n Seu total de vulnerabilidade é 100 a cada desafio voce ganha mais vulnerábilidade ou perde se errar os desafios,\n agora vamos testar se o sistema funciona";
+        String mensagem = "****Bem Vindo ao tutorial de Defesa, \nA Defesa é praticamente a sua vida, se ela chegar a 0 voce será rastreado e preso.\n Seu total de Defesa é 100 a cada desafio voce ganha mais Defesa ou perde se errar os desafios,\n agora vamos testar se o sistema funciona";
         TextoLento(mensagem, 30);
+        
         System.out.println("\nO numero binário 0001 equivale a quanto em decimal ?.");
         resposta = sc.nextInt();
+        
         if (resposta == 1) {
-            System.out.println("Resposta correta + 10 vulnerabilidade Como bonus");
+            System.out.println("Resposta correta + 10 Defesa Como bonus");
             premio = premio + 10;
         } else {
             System.out.println("Resposta errada, Voce não perdeu nada dessa vez");
         }
         return premio;
     }
-
-    public static void missao1(int a) {
+        //A primeira missão não pesa na pontuação, pois o método de acertividade é aleatório.
+        public static void missao1(int a) {
         Scanner scan = new Scanner(System.in);
-
         for (int i = 1; i < 5; i++) {
 
-            System.out.println(nomedousuario);
+            System.out.print(nomedousuario);
             a = scan.nextInt();
 
             Random gerador = new Random();
             int valorgerado = gerador.nextInt(2) + 1;
 
-            if (a == valorgerado) {
+            if (a == valorgerado){
                 System.out.println("IP: 177.102.44.83");
-                System.out.println("Ótimo novato, você é demais !");
-
+                System.out.println("@NIGHMARE : Ótimo novato, você é demais !");
                 break;
-            } else {
+            }else{
                 System.out.println("ERRO IP: 177.102.44.8" + valorgerado);
                 System.out.println("@NIGHTMARE : MANO N F0@#");
-
-            }
-
-        }
-
-    }
-
-    static int missao2() {
+                
+                 if(i == 4){
+                     System.out.println("");
+                 System.out.println("@NIGHTMARE : Caramba, você mal entra na parada e já começa me lascando... \n eu poderia ter sido preso.");
+                 
+                 }
+                }
+               }
+              }
+    
+        //finaliza missão 1, inicia missão 2.
+        static int missao2(){
 
         int premio = 0;
         char resp;
@@ -204,8 +280,8 @@ public class Jogo10 {
 
         Scanner sc = new Scanner(System.in);
         String msg;
-        List<Integer> numbers = Arrays.asList(01111111, 1101010, 11101010, 1011011);
-        List<String> palavras = Arrays.asList("01111111", "1101010", "11101010", "1011011");
+        List<Integer> numbers = Arrays.asList(00111111, 1101010, 11101010, 1011011);
+        List<String> palavras = Arrays.asList("00111111", "1101010", "11101010", "1011011");
         
         System.out.println("S=A+B+C");
         msg = ("A  B  C\n"
@@ -218,53 +294,51 @@ public class Jogo10 {
                 + "0  1  1 \n"
                 + "0  1  1 \n");
         TextoLento(msg, 30);
-
         do {
             Collections.shuffle(palavras);
             System.out.println("Valor de S \n(a)" + palavras.get(0) + "\n(b)" + palavras.get(1) + "\n(c)" + palavras.get(2) + "\n(d)" + palavras.get(3));
             resp = sc.next().charAt(0);
             resp = Character.toLowerCase(resp);
             if (resp == 'a') {
-                if (palavras.get(0) == "01111111") {
+                if(palavras.get(0) == "00111111"){
                     System.out.println("Resposta correta");
                     loop = loop + 99;
                     premio = premio + 10;
                     break;
-                } else {
+                }else{
                     System.out.println("Resposta incorreta");
-
                 }
-            } else if (resp == 'b') {
-                if (palavras.get(1) == "01111111") {
+            }else if(resp == 'b') {
+                if(palavras.get(1) == "00111111"){
                     System.out.println("Resposta correta");
                     loop = loop + 99;
                     premio = premio + 10;
                     break;
-                } else {
+                }else{
                     System.out.println("Resposta incorreta");
                 }
-            } else if (resp == 'c') {
-                if (palavras.get(2) == "01111111") {
+            } else if(resp == 'c') {
+                if (palavras.get(2) == "00111111"){
                     System.out.println("Resposta correta");
                     loop = loop + 99;
                     premio = premio + 10;
                     break;
-                } else {
+                }else{
                     System.out.println("Resposta incorreta");
 
                 }
-            } else if (resp == 'd') {
-                if (palavras.get(3) == "01111111") {
+             }else if (resp == 'd') {
+                if (palavras.get(3) == "00111111") {
                     System.out.println("Resposta correta");
                     loop = loop + 99;
                     premio = premio + 10;
 
-                } else {
+                }else{
                     System.out.println("Resposta incorreta");
                     
 
                 }
-            } else {
+               }else{
                 System.out.println("Resposta incorreta");
             }
             loop++;
@@ -276,5 +350,126 @@ public class Jogo10 {
         }
         return premio;
     }
+    //Fim missão2.
+       
+//Missão3.
+        public static int missao3(String a){
+         int premio;
+          if(a.equals("d")){
+              System.out.print("O sniper acertou o tiro ! \n");
+              premio = 10;
+              nivel = nivel + 100;
+              System.out.println("NIGHTMARE@KALI : Acabamos de matar a nossa ponta solta, ele é um investigador da policia federal de crimes cibernéticos \n NIGHTMARE@kali : Ele era um p%@* corrupto.");
+         }else{
+              System.out.print("O sniper errou o tiro ! \n");
+              premio = - 30;
+             nivel = nivel - 50;
+               
+              System.out.println("NIGHMARE@KALI : Isso não vai ser nada bom para a sua reputação...");
+         }
+          return premio;
+         }  
+//misssão4
+      public static int missao4(String a){
+          int premio = 0;
+          if(a.equals("1 2 4 8 16 32 64 128")){
+              System.out.println("NIGHTMARE@KALI : BOA MLK");
+              nivel = nivel + 300;
+              premio = 10;
+          }else{
+              System.out.println("NIGHTMARE@KALI : Vacilou mano.");
+              nivel = nivel - 20;
+              premio = premio - 50;
+          }
+        return premio;
+      }
+      
+//missão5      
+      static int missao5(){
 
+        int premio = 0;
+        char resp;
+        int loop = 0;
+        int iniciarm;
+
+        Scanner sc = new Scanner(System.in);
+        String msg;
+        List<String> palavras = Arrays.asList("2fd", "3e4", "2c", "e9");
+        
+        System.out.println("");
+        msg = ("NIGHTMARE@KALI : Bom dia novato Adivinha?,/n"
+                + "NIGHTMARE@KALI : Hoje é mais simples do que a ultima, nosso contato conseguiu um link de acesso, com os computadores da policia/n"
+                + "NIGHTMARE@KALI : e a ultima mensagem que ele enviou foi o numero, 765, sabemos que precisamos achar o valor decimal no hd da policia/n"
+                + "NIGHTMARE@KALI : para recuperar os dados");
+        TextoLento(msg, 30);
+        do {
+            Collections.shuffle(palavras);
+            System.out.println("Valor 765 \n(a)" + palavras.get(0) + "\n(b)" + palavras.get(1) + "\n(c)" + palavras.get(2) + "\n(d)" + palavras.get(3));
+            resp = sc.next().charAt(0);
+            resp = Character.toLowerCase(resp);
+            if (resp == 'a') {
+                if(palavras.get(0) == "2fd"){
+                    System.out.println("Resposta correta");
+                    loop = loop + 99;
+                    premio = premio + 10;
+                    break;
+                }else{
+                    System.out.println("Resposta incorreta");
+                }
+            }else if(resp == 'b') {
+                if(palavras.get(1) == "2fd"){
+                    System.out.println("Resposta correta");
+                    loop = loop + 99;
+                    premio = premio + 10;
+                    break;
+                }else{
+                    System.out.println("Resposta incorreta");
+                }
+            } else if(resp == 'c') {
+                if (palavras.get(2) == "2fd"){
+                    System.out.println("Resposta correta");
+                    loop = loop + 99;
+                    premio = premio + 10;
+                    break;
+                }else{
+                    System.out.println("Resposta incorreta");
+
+                }
+             }else if (resp == 'd') {
+                if (palavras.get(3) == "2fd") {
+                    System.out.println("Resposta correta");
+                    loop = loop + 99;
+                    premio = premio + 10;
+
+                }else{
+                    System.out.println("Resposta incorreta");
+                    
+
+                }
+               }else{
+                System.out.println("Resposta incorreta");
+            }
+            loop++;
+            premio = premio - 10;
+        } while (loop < 3);
+        
+        if(premio < 0){
+            premio = -10;
+        }
+        return premio;
+    }
+      public static int missao6(String b){
+          int premio = 0;
+          if(b.equals("154663")){
+              System.out.println("NIGHTMARE@KALI : BOA MLK");
+              nivel = nivel + 300;
+              premio = 10;
+          }else{
+              System.out.println("NIGHTMARE@KALI : Vacilou mano.");
+              nivel = nivel - 20;
+              premio = premio - 50;
+          }
+        return premio;
+      }
+      
 }
