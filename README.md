@@ -20,7 +20,8 @@ Java – Base do projeto
 # Versionamento
 Usamos o GitHub para controle de versão. 
 # Autores
-Arnaldo Victor Yamawaki Alves https://github.com/Yamwaki-kun
+Arnaldo Victor Yamawaki Alves https://github.com/Yamwaki-kun<br>
+
 Vitor Souza Amaral https://github.com/Vitoramaraldsa
 <br>
 # Licença
