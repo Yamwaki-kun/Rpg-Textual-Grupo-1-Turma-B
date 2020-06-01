@@ -21,6 +21,7 @@ Java – Base do projeto
 Usamos o GitHub para controle de versão. 
 # Autores
 Arnaldo Victor Yamawaki Alves https://github.com/Yamwaki-kun
+Vitor Souza Amaral https://github.com/Vitoramaraldsa
 <br>
 # Licença
 Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE.md para obter detalhes
